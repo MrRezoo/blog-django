@@ -5,10 +5,15 @@ from django.contrib.auth.models import User
 from django.utils import timezone
 
 
+class PublishedArticleManager(models.Manager):
+    def get_queryset(self):
+        return super().get_queryset().filter(status='publish')
+
+
 class Article(models.Model):
     STATUS = (
         ('draft', 'Draft'),
-        ('pub;isj', 'Publish')
+        ('publish', 'Publish')
     )
     title = models.CharField(max_length=120)
     slug = models.SlugField(max_length=120, unique=True)
@@ -18,6 +23,8 @@ class Article(models.Model):
     created = models.DateTimeField(auto_now_add=True)
     updated = models.DateTimeField(auto_now=True)
     status = models.CharField(max_length=20, choices=STATUS, default='draft')
+    objects = models.Manager()
+    published = PublishedArticleManager()
 
     def __str__(self):
         return f"{self.title} #{self.writer}"
@@ -25,4 +32,4 @@ class Article(models.Model):
     def get_absolute_url(self):
         from django.urls import reverse
 
-        return reverse('article_detail', args=[self.id,self.slug])
+        return reverse('article_detail', args=[self.id, self.slug])

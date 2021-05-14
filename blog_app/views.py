@@ -4,7 +4,7 @@ from .models import Article
 
 # Create your views here.
 def all_articles(request):
-    articles = Article.objects.all()
+    articles = Article.published.all()
     return render(request, 'blog_app/all_articles.html', {'all_articles': articles})
 
 
