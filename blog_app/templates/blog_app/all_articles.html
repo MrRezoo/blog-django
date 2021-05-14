@@ -1,0 +1,20 @@
+{% extends 'base.html' %}
+
+
+{% block title %}
+    articles
+{% endblock %}
+
+{% block title-head %}
+    All articles
+{% endblock %}
+
+{% block content %}
+
+    <div class="card">
+        {% for article in all_articles %}
+            <p class="card-body">{{ article.title }}</p>
+        {% endfor %}
+    </div>
+
+{% endblock %}
