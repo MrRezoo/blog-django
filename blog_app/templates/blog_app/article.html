@@ -1,0 +1,22 @@
+{% extends 'base.html' %}
+
+
+{% block title %}
+    detail
+{% endblock %}
+
+{% block title-head %}
+    {{ article_detail.title }}
+{% endblock %}
+
+{% block lead %}
+    {{ article_detail.publish }}
+{% endblock %}
+
+
+{% block content %}
+    <hr>
+    {{ article_detail.body }}
+
+
+{% endblock %}

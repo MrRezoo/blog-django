@@ -21,3 +21,8 @@ class Article(models.Model):
 
     def __str__(self):
         return f"{self.title} #{self.writer}"
+
+    def get_absolute_url(self):
+        from django.urls import reverse
+
+        return reverse('article_detail', args=[self.id,self.slug])
