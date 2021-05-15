@@ -31,5 +31,4 @@ class Article(models.Model):
 
     def get_absolute_url(self):
         from django.urls import reverse
-
         return reverse('blog_app:article_detail', args=[self.id, self.slug])
