@@ -62,7 +62,11 @@ source venv/bin/activate
  pip install -r requirements.txt
 ```
 
-* last step `follow the directories`
+* last step run django server
+
+```shell
+ python manage.py runserver
+```
 
 ## Credits
 
