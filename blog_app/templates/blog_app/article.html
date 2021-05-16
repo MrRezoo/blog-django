@@ -16,13 +16,14 @@
 {% endblock %}
 
 {% block lead %}
-    {{ article_detail.publish }}
+    {{ article_detail.publish|date:"l j - M - Y | " }}
+    {{ article_detail.publish|timesince }}
 {% endblock %}
 
 
 {% block content %}
     <hr>
-    {{ article_detail.body }}
+    {{ article_detail.body|safe }}
 
 
 {% endblock %}
