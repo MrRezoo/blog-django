@@ -18,6 +18,18 @@ Hello friends of this [Mr.Rezoo](https://www.linkedin.com/in/reza-mobaraki/)
 
 Work on sample Blog with Django language . . .
 
+Some features we worked on
+
+* Templates -> DjangoTemplate Engine | filter , static , ...
+* Model
+* Manager
+* Form
+* Namespace
+* Admin panel customization
+* ckeditor
+* Static file
+* Media file
+
 ## Technologies
 
 Project is created with:
@@ -27,9 +39,8 @@ Project is created with:
 
 ## Help
 
-If you are considering a particular method, more modern technology Add to my
-project and send merge request, I will add you in the credits and contributors
-section
+If you are considering a particular method, more modern technology Add to my project and send merge request, I will add
+you in the credits and contributors section
 
 ## Setup
 
@@ -50,6 +61,7 @@ source venv/bin/activate
 ```shell
  pip install -r requirements.txt
 ```
+
 * last step `follow the directories`
 
 ## Credits
