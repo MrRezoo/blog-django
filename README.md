@@ -16,7 +16,7 @@ Hello friends of this [Mr.Rezoo](https://www.linkedin.com/in/reza-mobaraki/)
 
 ## General info
 
-Work on sample Blog with Django language . . .
+Work on sample Blog with Django framework . . .
 
 Some features we worked on
 
